@@ -1,0 +1,14 @@
+# Ignore ChromaDB (vector database) files
+chroma_db/
+
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore virtual environment
+venv/
+
+# Ignore .env file for security
+.env
+
+# Ignore Streamlit generated files
+*.log
