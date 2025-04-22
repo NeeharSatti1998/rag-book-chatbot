@@ -6,7 +6,7 @@ from chromadb.config import Settings
 from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
 
 
-data_path = Path(r"C:/Users/neeha\Downloads/RAG chatbot/data/merged_book_chunks.json")
+data_path = Path(r"C:\Users\neeha\Downloads\RAG_chatbot\data\merged_book_chunks.json")
 chroma_path = "chroma_db"
 collection_name = "book_chunks"
 model = "all-MiniLM-L6-V2"
