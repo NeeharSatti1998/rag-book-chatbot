@@ -17,7 +17,14 @@ top_k = 3
 def get_collection():
     embed_fn = SentenceTransformerEmbeddingFunction(model_name=embed_model)
     client = PersistentClient(path = chroma_path)
-    return client.get_collection(name=collection,embedding_function=embed_fn)
+
+    # Check if the collection exists
+    existing_collections = [col.name for col in client.list_collections()]
+    if collection not in existing_collections:
+        st.warning(f"Collection '{collection}' does not exist. Creating it now...")
+        client.create_collection(name=collection, embedding_function=embed_fn)
+
+    return client.get_collection(name=collection, embedding_function=embed_fn)
 
 
 collection = get_collection()
