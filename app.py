@@ -3,6 +3,8 @@ from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunct
 from chromadb import PersistentClient
 import ollama
 
+collection_name = "book_chunks"
+
 st.set_page_config(page_title="RAG Book Chatbot", layout = "wide")
 
 chroma_path = "chroma_db"
