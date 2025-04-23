@@ -61,7 +61,7 @@ I developed a **Streamlit-based frontend** to allow users to interact with the c
 
 ## AWS Deployment
 
-The app is **hosted on AWS EC2** (free tier), where I deployed:
+The app is **hosted on AWS EC2** (t3.large), where I deployed:
 - **Streamlit** for the frontend
 - The backend (ChromaDB and Ollama) is running on the same EC2 instance
 
