@@ -49,6 +49,6 @@ print(f"Adding {len(documents)} documents to ChromaDB.. ")
 collection.add(documents=documents, metadatas=metadata, ids=ids)
 
 # Persist the changes
-client.persist()
+#client.persist()
 
 print(f"Embeddings saved to `{chroma_path}` and ready for retrieval!")
