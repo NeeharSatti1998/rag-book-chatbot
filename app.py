@@ -12,7 +12,7 @@ st.set_page_config(page_title="RAG Book Chatbot", layout="wide")
 # Set paths and models
 chroma_path = "chroma_db"
 embed_model = "all-MiniLM-L6-V2"
-llm_model = "gemma2"  # Use gemma2 for lightweight model
+llm_model = "tinyllama"
 top_k = 3
 
 # Setup function to retrieve or create collection
