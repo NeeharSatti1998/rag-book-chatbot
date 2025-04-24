@@ -52,7 +52,7 @@ summarized_chunks = []
 
 for i, chunk in enumerate(chunks):
     prompt = f"""
-You are a helpful summarizer AI. You will read a section from the book 'The 7 habits of highly effective people' and return structured summary data in JSON format.
+You are a helpful summarizer AI. You will read a section from the given book  and return structured summary data in JSON format.
 
 Please return:
 1. The inferred chapter title.
