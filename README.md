@@ -1,20 +1,39 @@
-# RAG Chatbot for Books
+# RAG Book Chatbot – Portfolio Overview
 
 ## Overview
-This project implements a **Retrieval-Augmented Generation (RAG)** chatbot, leveraging knowledge from three popular books:
-- **Atomic Habits** by James Clear
-- **The 7 Habits of Highly Effective People** by Stephen Covey
-- **Rich Dad Poor Dad** by Robert Kiyosaki
+The RAG (Retrieval-Augmented Generation) Book Chatbot is an interactive QA system that answers user queries based on the content of well-known self-help books:
+- *Atomic Habits*
+- *The 7 Habits of Highly Effective People*
+- *Rich Dad Poor Dad*
 
-The chatbot answers user queries by retrieving relevant context from these books and generating human-like responses using the **Mistral model** via Ollama.
+The chatbot retrieves relevant information from book embeddings stored in ChromaDB and uses the Mistral model (via Ollama) to generate context-aware responses. It is deployed on AWS EC2 with a Streamlit interface and optional Docker support.
 
-### Key Features:
-- **Book Knowledge**: Supports three books to answer a wide range of queries.
-- **RAG Architecture**: Combines **retrieval-based search** (using ChromaDB) and **generation** (using Mistral).
-- **Stateful Chat**: Maintain conversational history for better user experience.
+## Technologies Used
+- **Streamlit**: Interactive UI
+- **ChromaDB**: Vector database for text chunk retrieval
+- **Ollama**: For running the Mistral language model
+- **AWS EC2**: Cloud hosting
+- **Docker**: Optional containerization
+- **Python**, `sentence-transformers`, `chromadb`, `torch`, etc.
 
-## Tech Stack:
-- **Streamlit**: For the chatbot interface.
-- **ChromaDB**: For vector search and retrieval of relevant text chunks.
-- **Ollama (Mistral)**: For generating context-based responses.
-- **Sentence-Transformers**: For embedding text chunks and generating vectors.
+## Deployment Steps
+1. Launch an Ubuntu EC2 instance and configure ports (SSH, Streamlit).
+2. Clone the GitHub repo and install dependencies.
+3. Populate ChromaDB using `embed_books.py`.
+4. Run `streamlit run app.py` to launch the app.
+5. (Optional) Use Docker to containerize and deploy.
+
+## Folder Structure
+```
+rag-book-chatbot/
+├── app.py
+├── embed_books.py
+├── chroma_db/
+├── data/
+├── book_data_cleaning.py
+├── Dockerfile
+└── requirements.txt
+```
+
+## Conclusion
+This project showcases a real-world RAG system integrating document retrieval, embeddings, and generative LLM response generation—deployed via cloud infrastructure and made accessible through an intuitive Streamlit interface.
